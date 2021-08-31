@@ -1,5 +1,5 @@
 cd $HOME/.local/share/games/opentictactoex
-
+mkdir $HOME/.local/share/applications/
 curl -O https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/media/icon.png
 
 echo "[Desktop Entry]
