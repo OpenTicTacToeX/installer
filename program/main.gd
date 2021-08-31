@@ -38,12 +38,12 @@ func _on_64_pressed():
 
 		
 		$install/text.text = "Creating Files"
-		OS.execute("bash", ["<","<(curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/start.sh)"])
+		OS.execute("xterm", ["-e", "curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/start.sh | bash"])
 		$install/text.text = "Installing Game"
-		OS.execute("bash", ["<","<(curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/download64.sh)"])
+		OS.execute("xterm", ["-e", "curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/download64.sh | bash"])
 		$install/text.text = "Creating Shortcuts"
-		OS.execute("bash", ["<","<(curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/end.sh)"])
-		print(lala)
+		OS.execute("xterm", ["-e", "curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/end.sh | bash"])
+		$install/text.text = "Done."
 
 
 func _on_curldetect_exit_pressed():
