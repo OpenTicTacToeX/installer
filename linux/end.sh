@@ -1,6 +1,6 @@
+cd $HOME/.local/share/games/opentictactoex
 
-curl -O https://can202.github.io/OpenTicTacToeX/src/textures/icon/256icon.png
-mv 256icon.png icon.png
+curl -O https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/media/icon.png
 
 echo "[Desktop Entry]
 Name=OpenTicTacToeX
@@ -8,8 +8,9 @@ Exec=$HOME/.local/share/games/opentictactoex/opentictactoex
 Icon=$HOME/.local/share/games/opentictactoex/icon.png
 Type=Application
 Categories=Game" >> opentictactoex.desktop
+chmod a+x opentictactoex.desktop
 
-cp opentictactoex.desktop ~/.local/share/applications/
+cp opentictactoex.desktop $HOME/.local/share/applications/
 
 echo "opentictactoex.desktop created"
 
