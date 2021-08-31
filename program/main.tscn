@@ -46,6 +46,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="term" type="Node2D" parent="."]
+visible = false
+
+[node name="exit" type="Button" parent="term"]
+margin_left = 28.6055
+margin_top = 18.0109
+margin_right = 64.6055
+margin_bottom = 38.0109
+text = "exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="term"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "don't have xterm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="install" type="Node2D" parent="."]
 position = Vector2( 0, 17 )
 
@@ -59,5 +80,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="pressed" from="32" to="." method="_on_32_pressed"]
 [connection signal="pressed" from="64" to="." method="_on_64_pressed"]
 [connection signal="pressed" from="curldetect/exit" to="." method="_on_curldetect_exit_pressed"]
+[connection signal="pressed" from="term/exit" to="." method="_on_curldetect_exit_pressed"]
