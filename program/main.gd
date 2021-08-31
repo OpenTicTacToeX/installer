@@ -32,9 +32,18 @@ func _exist(var programlinux : String):
 		return false
 	
 func _on_64_pressed():
+	var lala = []
 	if curlexist == true:
+		
+
+		
 		$install/text.text = "Creating Files"
-		OS.execute()
+		OS.execute("bash", ["<","<(curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/start.sh)"])
+		$install/text.text = "Installing Game"
+		OS.execute("bash", ["<","<(curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/download64.sh)"])
+		$install/text.text = "Creating Shortcuts"
+		OS.execute("bash", ["<","<(curl -s https://raw.githubusercontent.com/OpenTicTacToeX/installer/main/linux/end.sh)"])
+		print(lala)
 
 
 func _on_curldetect_exit_pressed():
